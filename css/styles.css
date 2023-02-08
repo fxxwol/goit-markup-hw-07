@@ -664,11 +664,27 @@ img {
 
 /* --------------------- MOBILE FOOTER ----------------- */
 
+.footer {
+  background-color: var(--dark-bcg);
+  color: #ffffff;
+  padding: 96px 0px;
+}
+
 .footer-wrap {
   display: flex;
   flex-direction: column;
   gap: 72px;
   justify-content: center;
+}
+
+.footer-desc {
+  color: #e7e9fc;
+
+  font-size: 16px;
+  line-height: 1.5;
+
+  max-width: 264px;
+  margin-top: 0 auto;
 }
 
 .footer-text {
@@ -680,8 +696,8 @@ img {
 }
 
 .footer-social-media {
-  margin-left: 120px;
-  margin-right: 80px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .social-title {
@@ -717,31 +733,22 @@ img {
   padding: 8px;
 }
 
-.footer {
-  background-color: var(--dark-bcg);
-  color: #ffffff;
-  padding: 96px 0px;
-}
-
-.footer-desc {
-  color: #e7e9fc;
-
-  font-size: 16px;
-  line-height: 1.5;
-
-  max-width: 264px;
-  margin-top: 0 auto;
+.footer-subscribe {
+  text-align: center;
 }
 
 .footer-form {
   display: flex;
-  gap: 24px;
+  width: 100%;
+  flex-direction: column;
+  gap: 16px;
   align-items: center;
   margin-top: 16px;
 }
 
 .footer-email {
-  width: 264px;
+  width: inherit;
+  max-width: 396px;
   height: 40px;
   background-color: transparent;
   padding: 8px 0px 8px 16px;
@@ -780,6 +787,7 @@ img {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
+  margin: 0 auto;
   transition: background-color 250ms var(--cubic);
 }
 
@@ -988,6 +996,46 @@ img {
   .customer-list {
     gap: 24px;
   }
+
+  /* ---------------- TABLET FOOTER ----------------- */
+
+  .footer-wrap {
+    flex-direction: row;
+    row-gap: 72px;
+    column-gap: 24px;
+    justify-content: left;
+    flex-wrap: wrap;
+  }
+
+  .footer-desc {
+    margin-top: 16px;
+  }
+
+  .footer-text {
+    display: block;
+    margin: 0;
+  }
+  .footer-social-media {
+    text-align: left;
+    margin: 0;
+  }
+
+  .footer-subscribe {
+    text-align: left;
+  }
+
+  .footer-form {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .footer-email {
+    min-width: 264px;
+  }
+
+  .btn.subscribe {
+    margin: 0;
+  }
 }
 
 /* ------------------------------ DESK ------------------------ */
@@ -1122,6 +1170,22 @@ img {
   }
 
   /* ----------------- DESK FOOTER ----------------- */
+
+  .footer {
+    padding: 100px 0px;
+  }
+
+  .footer-wrap {
+    row-gap: 0;
+    column-gap: 0;
+    justify-content: left;
+    flex-wrap: nowrap;
+  }
+  
+  .footer-social-media{
+    margin-left: 120px;
+    margin-right: 80px;
+  }
 }
 
 /* .container {
